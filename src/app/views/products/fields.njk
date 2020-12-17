@@ -40,8 +40,9 @@
         <input 
             type="text"
             name="price" 
-            placeholder="Preço do produto"
+            placeholder="R$ 0,00"
             value="{{ product.price}}"    
+            onkeydown="Mask.apply(this, 'formatBRL')"
         >
     </div>
     {% if product.old_price %}
