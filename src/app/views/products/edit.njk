@@ -5,22 +5,21 @@
         <form method="POST" action="/products?_method=PUT">
  
             <div class="header">
-                <h3>Editar Produto
-                    {{productId}}</h3>
+                <h3>Editar Produto {{productId}}</h3>
 
             </div>
 
             <div class="fields">
                 {% include 'products/fields.njk'%}
-                <input type="hidden" name="id" value={{pruduct.id}}>
+                <input type="hidden" name="id" value={{product.id}}>
             </div>
 
             <button class="button edit" type="submit">Atualizar</button>
 
         </form>
 
-        <form action="/product?_method=DELETE" id="form-delete" method="post">
-            <input type="hidden" name="id" value={{pruduct.id}}>
+        <form action="/products?_method=DELETE" id="form-delete" method="post">
+            <input type="hidden" name="id" value={{product.id}}>
             <button class="button delete" type="submit">DELETAR</button>
         </form>
     </section>
